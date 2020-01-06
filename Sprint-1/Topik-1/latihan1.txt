@@ -2,22 +2,24 @@
 
 $komputer =1;
 
-while($komputer <= 7) {
-    if($komputer==1) {
-        print "Pertama,nyalakan komputer";
-    }else if($komputer==2) {
-        print "Kedua,pilih ikon start atau tekan tombol star di keyboard";    
-    }else if($komputer==3){
-        print "Ketiga,pilih all program";
-    }else if($komputer==4) {
-        print "Keempat,pilih microsoft office";
-    }else if($komputer==5) {
-        print "Kelima,pilih microsoft office word";
-    }else if($komputer==6) {
-        print "Keenam,pilih file";
-    }else{
-        print "Ketujuh,pilih new file"
-    }
-
+while'$komputer <= 7' 
+    DISPLAY '
+        if'$komputer==1' 
+            DISPLAY 'Pertama,nyalakan komputer';
+        else if'$komputer==2' {
+            DISPLAY 'Kedua,pilih ikon start atau tekan tombol star di keyboard';    
+        else if'$komputer==3'
+            DISPLAY 'Ketiga,pilih all program';
+        else if'$komputer==4' 
+            DISPLAY 'Keempat,pilih microsoft office';
+        else if'$komputer==5' 
+            DISPLAY 'Kelima,pilih microsoft office word';
+        else if'$komputer==6'
+            DISPLAY 'Keenam,pilih file';
+        else
+            DISPLAY 'Ketujuh,pilih new file';
+        ENDIF
+    
+    '
 
 }
