@@ -1,0 +1,4 @@
+Jawaban tugas nomor 2:
+
+
+Karena perintah "which php" itu untuk menampilkan semua file yang sudah terinstall dan jika kita pake linux maka semua softwer yang sudah terinstall akan otomatis tersimpan didalam bin.
