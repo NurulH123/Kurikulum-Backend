@@ -1,0 +1,42 @@
+Penjelasan kode - kode:
+
+
+//var_dump($d + $e);
+    
+    #Ini akan menghasilkan nilai int(5)."$d" menyimpan tipe data integer dan "$e" bertipe data string namun didalamnya terdapat angka.jadi,"$d + $e" menggunakan         operator aritmatika,maka nilai keduanya akan ditambahkan.
+
+//var_dump($e == $f);
+
+    #Ini akan bernilai true.Sebab perintah ini menggunakan operator perbandingan(==),jadi perbedaan tipe data tidak masalah asalkan kedua variabel itu berisi angka.
+
+//var_dump($e === $f);
+
+    #Ini akan bernilai false.Sebab perintah ini menggunakan operator identitas,jadi perbedaan tipe data akan diperhitungkan.Oleh karena itu,untuk bernilai "true" maka kedua variabel tersebut harus memiliki tipe data yang sama.
+
+//var_dump($g);
+
+    #Ini akan bernilai null.Sebab nilai dari "$g" adalah null,jadi sistem akan mengembalikan null.
+
+//var_dump((bool)$g);
+
+    #Ini akan bernilai false.Sebab "bool" akan mengembalikan nilai "true" atau "false" sedangkan "$g" bertipe data "null".
+
+//var_dump((int)$g);
+
+    #Ini akan bernilai int(0).Sebab "int" mengembalikan angka dan null tidak memiliki nilai atau"0".
+
+//var_dump(true && false);
+
+    #Ini akan bernilai false.Sebab,jika kita menggunakan operator logika dan(&&) maka keduanya harus bernilai true untuk menghsilkan nilai "true".
+
+//var_dump(true || false);
+
+    #Ini akan bernilai true.Sebab,jika kita menggunakan operator logika atau(||) maka jika salah satu bernilai true maka hasilnya akan bernilai true.
+
+//var_dump(false || false);
+
+    #Ini akan bernilai false.Sebab keduanya bernilai false.Jadi,ia akan bernilai false.
+
+//var_dump(!false);
+
+    #Ini akan bernilai true.Sebab tanda "!" menyatakan "tidak" sehingga ia akan memunculkan nilai true.
