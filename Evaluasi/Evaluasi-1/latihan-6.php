@@ -36,8 +36,13 @@ $opt=$_POST['satu'];
 
 if(isset($num1,$num2)) {
     if($opt == '+') {
-        echo  "Hasilnya adalah" . $num1 += $num2 ;
-
+        echo  "Hasilnya adalah" . " " . $num1 += $num2 ;
+    }else if ($opt == '-') {
+        echo "Hasilnya adalah" ." " . $num1 -= $num2;
+    }else if ($opt == '*') {
+        echo "Hasilnya adalah" . " " . $num1 *= $num2;
+    }else{
+        echo "Hasilnya adalah" . " " .$num1 /= $num2;
     }
 }
 
