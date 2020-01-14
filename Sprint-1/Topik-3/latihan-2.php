@@ -1,11 +1,10 @@
 <?php 
 
-
-for($n =9;$n <= 17;$n++) {
-    if($n <= 17 && $n %2 == 1) {
+for($n=9;$n>=0;$n--) {
+    if($n % 2==0 || $n==9 ) {
         continue;
     }else{
-        echo $n-9 . " ";
+        echo $n ." ";
     }
 }
 
