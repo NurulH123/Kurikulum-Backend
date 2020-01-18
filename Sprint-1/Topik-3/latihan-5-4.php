@@ -11,17 +11,17 @@
 
 // echo "<br><br><br>";
 
-// for($n=9;$n>=1;$n--) {
-//     for($m=9;$m>=1;$m--) {
-//         if($n==$m || $n + $m==10 ) {
-//             echo "  + ";
-//         }else{
-//             echo "(" .$n .$m .")";
-//         }
-//     }
-//     echo "<br>";
-// }
-// echo "<br><br><br>";
+for($n=9;$n>=1;$n--) {
+    for($m=9;$m>=1;$m--) {
+        if($n==$m || $n + $m==10 ) {
+            echo "  + ";
+        }else{
+            echo "(" .$n .$m .")";
+        }
+    }
+    echo "<br>";
+}
+echo "<br><br><br>";
 
 // for($n=9;$n>=1;$n--) {
 //     for($m=9;$m>=1;$m--) {
