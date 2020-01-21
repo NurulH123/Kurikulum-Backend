@@ -41,36 +41,41 @@ $students =
 ];
 
 
-function urutnama(array $students) {
+// function urutId(array $students) {
+//     arsort($students);
+//     foreach($students as $key) {
+//         print_r($key);
+//     }
+// }
+
+// urutId($students);
+
+// function division(array $students) {
+//     asort($students);
+//     foreach($students as $key => $value) {
+//         if($value['division']=='PHP Backend')
+//         print_r($value);
+//     }
+// }
+// division($students);
+
+// function urutAge(array $students) {
+//     arsort($students);
+//     foreach($students as $key => $value) {
+//         if($value['age'] <'25') {
+//             print_r($value);
+//         }
+        
+//     }
+// }
+// urutAge($students);
+
+function urutAge(array $students) {
     arsort($students);
-    foreach($students as $key => $value) {
-        if($students[$key]['divisi']>='PHP Backend') {
-            print_r($value);
-        }
+    foreach($students as $study) {
+        print_r($study);
+        
     }
 }
-
-urutnama($students);
-$nama=urutnama($students);
-// ksort($nama);
-// print_r($nama);
-
-// arsort($nama);
-print_($nama);
-// ksort($nama);
-// print_r($nama);
-
-// function divisi(array $students) {
-// foreach($students as $ke => $val) {
-//     arsort($students);
-//     if($tudents[$key]['division']=['PHP Backend']) {
-//         print_r($val);
-//     }
- 
-// }
-// }
-
-// $divisi=divisi($students);
-
-// print_r($divisi);
+urutAge($students);
 ?>
