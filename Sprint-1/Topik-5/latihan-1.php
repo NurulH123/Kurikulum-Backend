@@ -40,7 +40,7 @@ $students =
     ],
 ];
 
-
+//A. Daftar santri berdasar nomor induk
 // function urutId(array $students) {
 //     arsort($students);
 //     foreach($students as $key) {
@@ -50,6 +50,7 @@ $students =
 
 // urutId($students);
 
+//C. Daftar santri yang minat PHP Backend
 // function division(array $students) {
 //     asort($students);
 //     foreach($students as $key => $value) {
@@ -59,23 +60,26 @@ $students =
 // }
 // division($students);
 
+// D. Jumlah santri berusia kurang dari 25 tahun
+function jmlAge(array $students) {
+    arsort($students);
+    foreach($students as $key => $value) {
+        if($value['age'] <'25') {
+            print_r($value);
+        }
+        
+    }
+}
+$jml[]=jmlAge($students);
+var_dump($jml)
+
+//E. Rerata usia santri
 // function urutAge(array $students) {
 //     arsort($students);
-//     foreach($students as $key => $value) {
-//         if($value['age'] <'25') {
-//             print_r($value);
-//         }
+//     foreach($students as $study) {
+//         print_r($study);
         
 //     }
 // }
 // urutAge($students);
-
-function urutAge(array $students) {
-    arsort($students);
-    foreach($students as $study) {
-        print_r($study);
-        
-    }
-}
-urutAge($students);
 ?>

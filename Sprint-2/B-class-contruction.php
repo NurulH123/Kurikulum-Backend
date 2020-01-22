@@ -18,7 +18,8 @@ class GeraiMiAyam
     }
 }
 
-$jalan = new GeraiMiAyam(23);
+$jalan = new GeraiMiAyam(32);
+
 
 // $jalan->order("$level");
 ?>
