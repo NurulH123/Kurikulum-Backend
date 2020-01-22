@@ -19,9 +19,7 @@ class GeraiMiAyam
         $miAyam = $this->ingredients[1][2]."\n";
         print_r($miAyam);
         echo " Mi Ayam " . $level ."\n";
-
         // mi ayam = $this->cook();
-
         // return $miAyam;
 
     }
