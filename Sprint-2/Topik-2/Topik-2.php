@@ -1,7 +1,12 @@
 <?php
 
-class hitung
+class Hitung
 { 
+    public function __construct($sejajar1,$sejajar2,$miring,$tinggi) {
+        
+        echo "luas trapesium = ". (1/2*($sejajar1+$sejajar2)*$tinggi)."\n";
+        echo "keliling trapesium = ".($sejajar1+$sejajar2+$miring+$tinggi)."\n\n";
+    }
     static protected $rumus = 
     [
         [
@@ -23,14 +28,11 @@ class hitung
         $angka =self::$rumus;
         echo $angka[0][1] ." ". ($angka[2]*($radius)**2) ;
         echo "\n";
-        echo $angka[1][1] ." ". (2*$angka[2]*$radius)."\n\n";
+        echo $angka[1][1] ." ". (2*$angka[2]*$radius);
     }
 
-    public static function trapesium($sejajar1,$sejajar2,$miring,$tinggi) {
-        $myRumus =self::$rumus;
-        echo $myRumus[0][2] ." ". (1/2*($sejajar1+$sejajar2)*$tinggi)."\n";
-        echo $myRumus[1][2] ." ".($sejajar1+$sejajar2+$miring+$tinggi);
-    }
+        
+    
 }
 
 
@@ -41,8 +43,11 @@ $sejajar1 = 5;
 $sejajar2 = 10;
 $miring = 3;
 
-hitung::persegi($panjang,$tinggi);
-hitung::lingkaran($radius);
-hitung::trapesium($sejajar1,$sejajar2,$miring,$tinggi);
+
+new Hitung($sejajar1,$sejajar2,$miring,$tinggi);
+
+Hitung::persegi($panjang,$tinggi);
+Hitung::lingkaran($radius);
+
 ?>
 

@@ -11,12 +11,14 @@ class GeraiMiAyam
         'mi','sawi','ayam','garam','rempah'
     ];
 
-    public static function order($level) {
+    public  function order($level) {
         $miAyam = self::$ingredients;
         print_r($miAyam);
         echo "Mi Ayam " .$level."\n";
     }
 }
 
-GeraiMiAyam::order('level 15');
+$jalan = new GeraiMiAyam(23);
+
+// $jalan->order("$level");
 ?>
