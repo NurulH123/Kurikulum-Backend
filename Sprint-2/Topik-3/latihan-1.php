@@ -3,7 +3,7 @@
 class Hitung
 { 
     public function __construct($sejajar1,$sejajar2,$miring,$lebar) {
-        
+        echo "\n\n";
         echo "luas trapesium = ". (1/2*($sejajar1+$sejajar2)*$lebar)."\n";
         echo "keliling trapesium = ".($sejajar1+$sejajar2+$miring+$lebar)."\n\n";
     }
@@ -32,13 +32,23 @@ class Hitung
     }
 }
         
-function warning(int $acces, int $trouble): float {
+// function warning(int $acces, int $trouble): float {
+//     if($trouble < 0) {
+//         throw new Exception('Angka tidak boleh kurang dari 0');
+//             echo "\n";
+//          $masuk =$acces * $trouble;
+//          return $masuk;
+//     }
+// }
+function numberDivision(int $acces, int $trouble) {
     if($trouble < 0) {
-        throw new Exception('Angka tidak boleh kurang dari 0');
-            echo "\n";
-         $masuk =$acces * $trouble;
-         return $masuk;
+        throw new Exception('Pembagi tidak boleh kurang dari 0');
     }
+
+    $masuk = $acces * $trouble;
+    echo "Hasil : ".$masuk;
+    return $masuk;
+    
 }
     echo "Masukkan nilai panjang :";
     $panjang = (int) fgets(STDIN);
@@ -48,11 +58,11 @@ function warning(int $acces, int $trouble): float {
     $result =null;
 
 try{
-    $result = warning($panjang,$tinggi);
+    $result = numberDivision($panjang,$tinggi);
 }catch(Exception $nol) {
     echo "Error".__FILE__."baris ke-".$nol->getline()."\n";
     echo $nol->getMessage();
-    $jalan = New Hitung($panjang,$lebar,4,3);
+    // $jalan = New Hitung($panjang,$lebar,4,3);
 }
 
 
