@@ -61,7 +61,7 @@ $students =
 // division($students);
 
 // D. Jumlah santri berusia kurang dari 25 tahun
-function jmlAge(array $students) {
+function jmlAge( $students) {
     arsort($students);
     foreach($students as $key => $value) {
         if($value['age'] <'25') {
@@ -71,7 +71,7 @@ function jmlAge(array $students) {
     }
 }
 $jml[]=jmlAge($students);
-var_dump($jml)
+print_r($jml);
 
 //E. Rerata usia santri
 // function urutAge(array $students) {
