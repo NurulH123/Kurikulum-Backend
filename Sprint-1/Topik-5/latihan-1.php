@@ -50,6 +50,16 @@ $students =
 
 // urutId($students);
 
+//B.Daftar santri berdasar nama
+function urutId(array $students) {
+    arsort($students);
+    foreach($students as $key) {
+        print_r($key);
+    }
+}
+    
+    urutId($students);
+
 //C. Daftar santri yang minat PHP Backend
 // function division(array $students) {
 //     asort($students);
@@ -61,25 +71,46 @@ $students =
 // division($students);
 
 // D. Jumlah santri berusia kurang dari 25 tahun
-function jmlAge( $students) {
-    arsort($students);
-    foreach($students as $key => $value) {
-        if($value['age'] <'25') {
-            print_r($value);
-        }
-        
-    }
-}
-$jml[]=jmlAge($students);
-print_r($jml);
-
-//E. Rerata usia santri
-// function urutAge(array $students) {
+// function jmlAge( $students) {
 //     arsort($students);
-//     foreach($students as $study) {
-//         print_r($study);
+//     foreach($students as $key => $value) {
+//         if($value['age'] <'25') {
+//             // print_r($value);
+//             $santri25[]=$value;
+//             print_r($santri25);
+//             echo "Jumlah santri berusia kurang dari 25 adalah ".count($santri25)." orang"."\n";
+//         }
         
 //     }
 // }
-// urutAge($students);
+
+// jmlAge($students);
+
+// E. Rerata usia santri
+// function rataUsia(array $students) {
+//     arsort($students);
+//     for($i=0;$i<count($students);$i++) {
+//         $usia []= $students[$i]['age']."\n";
+//         print_r($usia);
+        // echo array_sum($usia)/count($usia)."\n";
+
+//     }
+// }
+// rataUsia($students);
+
+//F. Santri paling muda
+// function rataUsia(array $students) {
+//     arsort($students);
+//     foreach($students as $key => $value) {
+//         // $usia []= $students[$key]['age']."\n";
+//         if($value['age']=='18') {
+//             echo "Santri termuda adalah :\n\n";
+//             echo "Nama   = ".$value['name']."\n";
+//             echo "ID     = ".$value['id']."\n";
+//             echo "Divisi = ".$value['division']."\n";
+//             echo "Age    = ".$value['age']."\n";
+//         }
+//     }
+// }       
+// rataUsia($students);
 ?>
