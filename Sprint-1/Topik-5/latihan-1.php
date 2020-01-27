@@ -52,9 +52,9 @@ $students =
 
 //B.Daftar santri berdasar nama
 function urutId(array $students) {
-    arsort($students);
-    foreach($students as $key) {
-        print_r($key);
+    asort($students);
+    foreach($students as $key=>$value) {
+        print_r($value['name']);
     }
 }
     
