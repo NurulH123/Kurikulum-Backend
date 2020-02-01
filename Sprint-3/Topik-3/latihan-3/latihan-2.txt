@@ -1,0 +1,8 @@
+1. Bentuk Normal Pertama (1NF)
+    Bentuk normal pertama adalah tabel yang tidak mengandung pengulangan data dan nilai-nilai nonatomik.Sebuah atomik adalah field yang menyatakan data tunggal,bukan gabungan nilai-nilai.
+
+2. Bentuk Normal Kedua (2NF)
+    Bentuk normal kedua adalah tabel 1NF dan setiap field bukan kunci bergantung sepenuhnya pada kunci.
+
+3. Bentuk Normal Ketiga (3NF)
+    Bentuk normal ketiga adalah tabel yang sudah 2NF dan tidak ada non kunci yang bergantung pada elemen bukan kunci.
