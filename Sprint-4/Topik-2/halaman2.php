@@ -1,6 +1,7 @@
 <?php 
 session_start();
 
+
 if(isset($_POST['logout'])) {
     $_SESSION['nama'] = null;
     session_unset();
@@ -8,7 +9,6 @@ if(isset($_POST['logout'])) {
     header('Location:session.php');
     exit;
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

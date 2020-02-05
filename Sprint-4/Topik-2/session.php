@@ -1,6 +1,9 @@
 <?php
 session_start();
-
+if(isset($_SESSION['nama'])) {
+    header('Location:halaman2.php');
+    exit;
+}
 
 if(isset($_POST['login'])) {
     if($_POST['nama'] == null || $_POST['password'] == null) {
