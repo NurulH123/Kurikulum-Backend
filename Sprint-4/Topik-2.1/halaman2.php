@@ -1,11 +1,3 @@
-<?php
-
-function salam($waktu,$nama) {
-    echo "Selamat $waktu, $nama!";
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +7,6 @@ function salam($waktu,$nama) {
     <title>Document</title>
 </head>
 <body>
-    <h1><?= salam('siang','Nurul') ?></h1>
+    
 </body>
 </html>
