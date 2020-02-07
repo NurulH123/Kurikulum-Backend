@@ -4,8 +4,9 @@ require 'evaluasi5.php';
 if(isset($_GET['submit'])) {
     $nama =$_GET['nama'];
     $div =$_GET['divisi'];
+    $alamat =$_GET['alamat'];
     
-    $tambah->lihatData();
+    $tambah->insert($nama,$div,$alam);
 }
 $tambah =new Admin();
 

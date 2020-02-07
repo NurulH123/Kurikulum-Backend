@@ -2,14 +2,14 @@
 require 'PDO.php';
 //Ubah data
 
-$tambah = $tambah->edit($_GET['id']);
-// var_dump($tambah);
+$tambah1 = $tambah->edit($_GET['id']);
 
-if(isset($_GET['submit'])) {
-    $nama =$_GET['nama'];
-    $kode =$_GET['kode'];
-    $merk =$_GET['merk'];
-    $harga =$_GET['harga'];
+
+if(isset($_POST['submit'])) {
+    $nama =$_POST['nama'];
+    $kode =$_POST['kode'];
+    $merk =$_POST['merk'];
+    $harga =$_POST['harga'];
 
     $tambah->update($nama,$merk,$harga,$kode);
     header('Location:dataBarang.php');
@@ -26,7 +26,7 @@ if(isset($_GET['submit'])) {
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="get">
+    <form action="" method="post">
         <table>
             <tr>
                 
@@ -34,7 +34,7 @@ if(isset($_GET['submit'])) {
                     <label for="barang">Nama Barang </label>
                 </td>
                 <td>
-                    :   <input type="text" id="barang" name="nama" placeholder="Nama Barang" value="<?=$tambah->nama?>">
+                    :   <input type="text" id="barang" name="nama" placeholder="Nama Barang" value="<?=$tambah1->nama?>">
                 </td>
             </tr>
 
@@ -44,7 +44,7 @@ if(isset($_GET['submit'])) {
                     <label for="barang">Kode </label>
                 </td>
                 <td>
-                    :   <input type="text" id="barang" name="kode" placeholder="Kode" value="<?=$tambah->id?>">
+                    :   <input type="text" id="barang" name="kode" placeholder="Kode" value="<?=$tambah1->id?>">
                 </td>
             </tr>
 
@@ -54,7 +54,7 @@ if(isset($_GET['submit'])) {
                     <label for="barang">Merk Barang </label>
                     </td>
                 <td>
-                    :   <input type="text" id="barang" name="merk" placeholder="Merk Barang" value="<?=$tambah->merk?>">
+                    :   <input type="text" id="barang" name="merk" placeholder="Merk Barang" value="<?=$tambah1->merk?>">
                 </td>
             </tr>
 
@@ -63,7 +63,7 @@ if(isset($_GET['submit'])) {
                     <label for="harga"></label>Harga </label>
                     </td>
                 <td>
-                    :   <input type="text" id= "harga" name="harga" placeholder="Harga" value="<?=$tambah->harga?>">
+                    :   <input type="text" id= "harga" name="harga" placeholder="Harga" value="<?=$tambah1->harga?>">
                 </td>
             </tr>
             

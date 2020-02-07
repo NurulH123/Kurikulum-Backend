@@ -26,7 +26,7 @@
         }
     </style>
 </head>
-<body style="background-image:comp.jpg">
+<body>
 <div class="kotak">
     <h2>Input Barang</h2>
     <form action="dataBarang.php" method="post">

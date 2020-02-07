@@ -14,16 +14,16 @@ class Admin {
         $show =$this->conn->prepare($query);
         $show->execute();
         $result =$show->fetchAll(pdo::FETCH_ASSOC);
-        echo "hallo";
+        return $result;
     }
 
-    // function insert($nama,$div,$alamat) {
-    //     $query ="INSERT INTO santri (nama,divisi,alamat) VALUES ('$nama','$div','$alamat')";
-    //     $show =$this->conn->prepare($query);
-    //     $show->execute();
-    //     $result =$show->fetchAll(pdo::FETCH_ASSOC);
-    //     return $this->lihatData();
-    // }
+    function insert($nama,$div,$alamat) {
+        $query ="INSERT INTO santri (nama,divisi,alamat) VALUES ('$nama','$div','$alamat')";
+        $show =$this->conn->prepare($query);
+        $show->execute();
+        $result =$show->fetchAll(pdo::FETCH_ASSOC);
+        return $this->lihatData();
+    }
 
     // function delete() {
     //     $query ="DELETE FROM santri WHERE   nama=$nama";

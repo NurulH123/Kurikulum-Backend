@@ -11,7 +11,7 @@ if(isset($_POST['submit'])) {
     $tambah->insert($nama,$merk,$harga);
 }
 
-$tambah =new Penjualan();
+
 $show = $tambah->lihatData() ;
 
 //Menghapus data
