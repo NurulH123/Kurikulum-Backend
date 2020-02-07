@@ -14,18 +14,19 @@
             border :2px solid #eaea;
             margin :30px auto;
             border-radius :10px;
-            padding:10px;
+            padding:0px;
             display:relative;
         }
         h2{
             float:right;
+            padding:10px;
         }
         .table{
             padding :10px;
         }
     </style>
 </head>
-<body>
+<body style="background-image:comp.jpg">
 <div class="kotak">
     <h2>Input Barang</h2>
     <form action="dataBarang.php" method="post">
