@@ -27,30 +27,102 @@ if(isset($_GET['hapus'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Data Barang</title>
     <style>
-        
+        .header{
+            width:100%;
+            height:108px;
+            background-color:salmon;
+            padding:1px;
+            padding-left:50px;
+        }
+        .cheader{
+            width:100%;
+            height:20px;
+            padding:5px;
+            background-color:lightskyblue;
+            margin-top:10px;
+            padding-left:50px;
+        }
+        .cheader a{
+            margin-left:50px;
+            
+        }
+        .kotak{
+            margin:auto 30%;
+            margin-top:-20%;
+        }
         span{
             color:blue;
             font-weight: bold;
             font-style: italic;
         }
-        table{
-            border-color: lightblue;
-        }
         a{
-            
             text-decoration: none;
-            
+        }
+        button{
+            border-radius:4px;
+            color:#fff;
+        }
+        .header li{
+            width:70px;
+            height:70px;
+            background-color:lightpink;
+            border-radius:50%;
+            box-shadow: 0 0 1px 3px #eaeaea;  
+            overflow:hidden;
+            margin-top:-4px;
+        }
+        img{
+            width:70px;
+            height:70px;
+        }
+        .navigasi{
+            margin-top:-10px;
+            background-color:lightpink;
+            width:250px;
+            height:300px;
+        }
+        .navigasi li{
+            font-size:18px;
+            margin:10px;
+            margin-top:10px;
         }
     </style>
 </head>
 <body>
+<div class="header">
+    <div class="subH">
+        <ul>
+            <li><img src="2.jpg" alt=""></li>
+        </ul>
+        <p style="margin-top:-12px;">Selamat Datang Nurul</p>
+    </div>
+</div>
+
+<div class="cheader" >
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">List</a>
+        <a href="">Hubungi</a>
+</div>
+
+<div class="navigasi">
+    <h3 style="margin:15px 5px;color:blue;font-size:28px;">Pilih aktifitas</h3>
+    <ul type="circle" class="option" >
+        
+        <li> <a href=""> Dashbord</a></li>
+        <hr>
+        <li><a href="">Cek Penjualan</a></li>
+        <hr>
+        <li><a href="">Cek Pengiriman</a></li>
+        <hr>
+        <li><a href="">Grafik Penjualan</a></li>
+        <hr>
+    </ul>
+</div>
 <div class="kotak">
-<table border="1" cellspacing="0" cellpadding="10">
+<table border="1" cellspacing="0" cellpadding="10" style="border-color: lightblue;">
     <?php $i=1; ?>
     <tr>
         <th>No</th>
@@ -70,7 +142,7 @@ if(isset($_GET['hapus'])) {
         <td><?= $value['harga'];?></td>
     <form action="hapus.php" method="post">
             <td>
-                <button style="background-color: lightblue;" type="submit" name="ubah" ><a href="ubah.php?id=<?=$value['id'];?>">Ubah</a></button>
+                <button style="background-color:#1DA1F2;" type="submit" name="ubah" ><a href="ubah.php?id=<?=$value['id'];?>">Ubah</a></button>
             </td>
         
             <td>
@@ -81,31 +153,9 @@ if(isset($_GET['hapus'])) {
     <?php $i++; ?>
 <?php } ?>
 </table>
-<p style="font-size:20px;">Produk <span><?= $_POST['nama'];?></span> , dengan merk <span><?= $_POST['merk'];?></span>  dan harga <span><?= $_POST['harga'];?></span> telah <span style="color:red;">BERHASIL</span>  ditambahkan.</p>
+<p style="font-size:20px; margin-top:60px;">Produk <span><?= $_POST['nama'];?></span> , dengan merk <span><?= $_POST['merk'];?></span>  dan harga <span><?= $_POST['harga'];?></span> telah <span style="color:red;">BERHASIL</span>  ditambahkan.</p>
 <br>
-<br>
-<table>
-    <?php require 'ubah.php';
-    ?>
-    <tr>
-        <td>Barang</td>
-        <td>:   <?= $nama =$_GET['nama'];?></td>
-    </tr>
 
-    <tr>
-        <td>Merk</td>
-        <td>:   <?=$nama =$_GET['merk'];?></td>
-    </tr>
-
-    <tr>
-        <td>Harga</td>
-        <td>:   <?= $nama =$_GET['harga'];?></td>
-    </tr>
-</table>
-<p style="font-size:20px;">Data <span><?= $_GET['nama'];?></span> , merk <span><?= $_GET['merk'];?></span>  dan harga <span><?= $_GET['harga'];?></span> telah <span style="color:red;">BERHASIL</span>  diubah.</p>
-</div>
-<a href="inputBarang.php">Kembali</a>
-
-
+<a href="inputBarang.php">Kembali keinput</a>
 </body>
 </html>
