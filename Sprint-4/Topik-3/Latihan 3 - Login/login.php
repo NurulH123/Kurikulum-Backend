@@ -1,3 +1,19 @@
+<?php 
+require 'dbUser.php';
+
+if(isset($_POST['login'])) {
+    $nama = $_POST['nama'];
+    $password =$_POST['password'];
+
+    $lihat=$data->masuk($nama);
+    // if($lihat !== null) {
+
+    //     header('Location:beranda.php');
+    //     exit;
+    // } 
+    print_r($lihat);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +57,7 @@
                     <td><input type="password" name="password" id="password" placeholder="password"></td>
                 </tr>
                 <tr>
-                    <td><button type="submit" name="masuk">Masuk</button></td>
+                    <td><button type="submit" name="login">Masuk</button></td>
                 </tr>
             </form>
         </table>

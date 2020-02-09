@@ -42,20 +42,39 @@ if(isset($_GET['hapus'])) {
             padding:5px;
             background-color:lightskyblue;
             margin-top:10px;
-            padding-left:50px;
+            padding-left:30px;
         }
         .cheader a{
             margin-left:50px;
-            
+
         }
         .kotak{
-            margin:auto 30%;
-            margin-top:-20%;
+            width:800px;
+            min-height:300px;
+            border:1px solid black;
+            text-align: center;
+            margin:10% 20%;
+            margin-top:-25%;
+            justify-content: center;
+            display:grid;
+            place-items: center;
         }
-        span{
-            color:blue;
+        .dua{
+            color:darkblue;
             font-weight: bold;
-            font-style: italic;
+            text-align:center;
+            display:inline-block;
+            width:75px;
+            height:21px;
+        }
+        .cheader a:hover .dua{
+            color:darkblue;
+            font-weight: bold;
+            text-align:center;
+            background-color:#ddd;
+            display:inline-block;
+            width:75px;
+            height:21px;
         }
         a{
             text-decoration: none;
@@ -80,14 +99,28 @@ if(isset($_GET['hapus'])) {
         .navigasi{
             margin-top:-10px;
             background-color:lightpink;
-            width:250px;
+            width:255px;
             height:300px;
         }
-        .navigasi li{
+        .satu{
             font-size:18px;
             margin:10px;
-            margin-top:10px;
+            padding-left:10px;
+            border-radius:3px;
+            /* background-color:#ddd; */
+            width:80%;
+            height:20px;
         }
+        .navigasi ul li a:hover .satu{
+            font-size:18px;
+            margin:10px;
+            padding-left:10px;
+            border-radius:3px;
+            background-color:#ddd;
+            width:85%;
+            height:35%;
+        }
+
     </style>
 </head>
 <body>
@@ -96,32 +129,36 @@ if(isset($_GET['hapus'])) {
         <ul>
             <li><img src="2.jpg" alt=""></li>
         </ul>
-        <p style="margin-top:-12px;">Selamat Datang Nurul</p>
+        <p style="margin-top:-12px;font-weight:bold;">Selamat Datang Nurul</p>
     </div>
 </div>
 
 <div class="cheader" >
-        <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">List</a>
-        <a href="">Hubungi</a>
+        <a href=""><div class="dua">Home</div></a>
+        <a href=""><div class="dua">Profil</div></a>
+        <a href=""><div class="dua">Informasi</div></a>
+        <a href=""><div class="dua">Bantuan</div></a>
 </div>
 
 <div class="navigasi">
     <h3 style="margin:15px 5px;color:blue;font-size:28px;">Pilih aktifitas</h3>
-    <ul type="circle" class="option" >
-        
-        <li> <a href=""> Dashbord</a></li>
-        <hr>
-        <li><a href="">Cek Penjualan</a></li>
-        <hr>
-        <li><a href="">Cek Pengiriman</a></li>
-        <hr>
-        <li><a href="">Grafik Penjualan</a></li>
-        <hr>
-    </ul>
+        <ul type="circle">
+           
+            <li><a href=""><div class="satu">Dashbord</div></a></li>
+            <hr>
+            <li><a href=""><div class="satu">Cek Penjualan</div></a></li>
+            <hr>
+            <li><a href=""><div class="satu">Cek Pengiriman</div></a></li>
+            <hr>
+            <li><a href=""><div class="satu">Grafik Penjualan</div></a></li>
+            <hr>
+            
+        </ul>
 </div>
+<a style="margin-top:20px;" href="inputBarang.php">Kembali keinput</a>
+
 <div class="kotak">
+<h2>Data Barang</h2>
 <table border="1" cellspacing="0" cellpadding="10" style="border-color: lightblue;">
     <?php $i=1; ?>
     <tr>
@@ -153,9 +190,9 @@ if(isset($_GET['hapus'])) {
     <?php $i++; ?>
 <?php } ?>
 </table>
-<p style="font-size:20px; margin-top:60px;">Produk <span><?= $_POST['nama'];?></span> , dengan merk <span><?= $_POST['merk'];?></span>  dan harga <span><?= $_POST['harga'];?></span> telah <span style="color:red;">BERHASIL</span>  ditambahkan.</p>
+<p style="font-size:25px; margin-top:50px;">Produk <span><?= $_POST['nama'];?></span> , dengan merk <span><?= $_POST['merk'];?></span>  dan harga <span><?= $_POST['harga'];?></span> telah <span style="color:red;">BERHASIL</span>  ditambahkan.</p>
+</div>
 <br>
 
-<a href="inputBarang.php">Kembali keinput</a>
 </body>
 </html>

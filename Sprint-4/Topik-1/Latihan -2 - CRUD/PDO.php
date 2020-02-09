@@ -14,7 +14,6 @@ class Penjualan {
         $show = $this->conn->prepare($query);
         $show->execute();
         $result = $show->fetchAll(pdo::FETCH_ASSOC);
-        // print_r($result);
         return $result;
     }
 
@@ -24,7 +23,7 @@ class Penjualan {
         $show->execute();
         $result = $show->fetchAll(pdo::FETCH_ASSOC);
         return $this->lihatData();
-        echo "Nama Merk : ".$merk;
+        // echo "Nama Merk : ".$merk;
     }
 
     function delete($id) {
@@ -41,7 +40,6 @@ class Penjualan {
         $show->execute();
         $result =$show->fetch(pdo::FETCH_OBJ); 
         return $result;
-        // echo "Hallo,admin";
     }
 
     function update($nama,$merk,$harga,$kode) {
@@ -49,11 +47,9 @@ class Penjualan {
         $show =$this->conn->prepare($query);
         $show->execute();
         return $show;
-        // echo "Hallo,admin";
     }
 
 }
 $tambah =new Penjualan();
 $tambah->lihatData();
-
 ?>

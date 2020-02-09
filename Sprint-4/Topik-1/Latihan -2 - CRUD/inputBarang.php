@@ -8,8 +8,9 @@
     <title>Input Barang</title>
     <style>
         body{
-            background-image:url(comp.jpg);
-            background-repeat: repeat-x;
+            background-image:url(img/comp.jpg);
+            background-repeat:no-repeat;
+            background-size:1380px 670px;
             
         }
         .kotak{
@@ -22,7 +23,7 @@
             box-shadow: 5px -3px 5px #ddd;
             padding:0px;
             display:relative;
-            opacity:1;
+            opacity:.9;
         }
         h2{
             margin: auto 35%;
@@ -46,12 +47,12 @@
         button{
             background-color:#269F42;
             border-radius:5px;
-            width:70px;
-            height:35px;
+            width:45%;
+            height:30%;
             box-shadow: 0 0 7px lightgreen;
-            margin-left:20%;
+            margin-left:2%;
             margin-top:30%;
-            font-size:18px;
+            font-size:100%;
             font-weight:bold;
             color:#ccc;
         }

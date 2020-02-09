@@ -8,11 +8,19 @@ class User{
 
     function __construct()
     {
-        $this->db = new PDO("mysql::host=$this->host;dbname=user",$this->username,$this->password);
+        $this->data= new PDO("mysql::host=$this->host;dbname=user",$this->username,$this->password);
     }
 
-    function show() {
-        $query = 
+    function masuk($nama) {
+        $query = "SELECT * FROM masuk WHERE nama='$nama'";
+        $show = $this->data->prepare($query);
+        $show->execute();
+        $result = $show->fetchAll(pdo::FETCH_ASSOC);
+        return $result;
     }
+    
 }
+
+$data =new User();
+
 ?>
