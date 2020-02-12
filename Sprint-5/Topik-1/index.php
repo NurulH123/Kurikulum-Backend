@@ -7,7 +7,7 @@ require_once('Luas/require.php');
 // $alas =$_GET['alas'];
 // $tinggi =$_GET['tinggi'];
 
-$lingkaran =new Lingkaran($radius);
+
 // $persegi = new Persegi($sisi);
 // $lingkaran = new Segitiga($alas,$tinggi);
 ?>
@@ -21,21 +21,23 @@ $lingkaran =new Lingkaran($radius);
     <title>Luas Bangun Datar</title>
     <style>
         .kotak{
-            margin:-7% auto;
-            width:65%;
-            height:58%;
-            border:1px solid #ddd;
+            margin:5% auto;
+            width:63%;
+            height:410px;
+            border:1px solid black;
             padding:2%;
             position:relative;
         }
         .lingkaran{
-            border:1px solid #ddd;
+            border:1px solid black;
             width:30%;
-            height:78%;
+            height:140px;
             text-align:center;
+            padding-bottom:20%;
             margin-top:12%;
+            position:relative;
         }
-        .persegi{
+        /* .persegi{
             border:1px solid #ddd;
             width:30%;
             height:78%;
@@ -43,8 +45,8 @@ $lingkaran =new Lingkaran($radius);
             position:relative;
             margin-left:33%;
             margin-top:-34%;
-        }
-        .segitiga{
+        } */
+        /* .segitiga{
             border:1px solid #ddd;
             width:30%;
             height:68%;
@@ -52,7 +54,7 @@ $lingkaran =new Lingkaran($radius);
             position:absolute;
             margin-left:63%;
             margin-top:-32%;
-        }
+        } */
         .ipLingkaran{
             margin-top:-3%;
             width:66%;
@@ -61,26 +63,26 @@ $lingkaran =new Lingkaran($radius);
             padding:4%;
             border-radius:3px;
         }
-        .ipPersegi{
+        /* .ipPersegi{
             margin-top:-3%;
             width:66%;
             height:14%;
             font-size:15px;
             padding:4%;
             border-radius:3px;
-        }
-        .ipSegitiga1{
+        } */
+        /* .ipSegitiga1{
             margin-top:-5%;
             width:66%;
             height:12%;
             border-radius:3px;
-        }
-        .ipSegitiga2{
+        } */
+        /* .ipSegitiga2{
             margin-top:4%;
             width:66%;
             height:12%;
             border-radius:3px;
-        }
+        } */
     </style>
 </head>
 <body>
@@ -88,15 +90,16 @@ $lingkaran =new Lingkaran($radius);
         <div style="margin-top:-5%;" class="subk">
             <form action="" method="get">
                 <div class="lingkaran">
-                    <p style="margin-top:33%;">Masukkan Jari-jari Lingkaran</p>
+                    <p style="margin-top:40%;">Masukkan Jari-jari Lingkaran</p>
                     <br>
                         <input class="ipLingkaran" type="number" name="radius" placeholder="Jari-jari Lingkaran">
                     <br>
+                    <br>
                     <?php 
                         $radius =$_GET['radius']; 
-                    
+                        $lingkaran =new Lingkaran($radius);
                     ?>
-                    <button style="margin-left:54%;margin-top:28%;" type="submit" name="lingkaran">Jalankan</button>
+                    <button style="margin-left:54%;margin-top:10%;" type="submit" name="lingkaran">Jalankan</button>
                 </div>
                 
                 <div class="persegi">
@@ -104,17 +107,17 @@ $lingkaran =new Lingkaran($radius);
                     <br>
                         <input class="ipPersegi" type="number" name="sisi" placeholder="Sisi Persegi">
                     <br>
-                    <button style="margin-left:54%;margin-top:28%;" type="submit" name="persegi">Jalankan</button>
+                    <!-- <button style="margin-left:54%;margin-top:28%;" type="submit" name="persegi">Jalankan</button> -->
                 </div>
 
                 <div class="segitiga">
-                    <p style="margin-top:30%">Masukkan Alas & Tinggi Segitiga</p>
+                    <!-- <p style="margin-top:30%">Masukkan Alas & Tinggi Segitiga</p>
                     <br>
                         <input class="ipSegitiga1" type="number" name="alas" placeholder="Alas Segitiga">
+                    <br> -->
+                        <!-- <input class="ipSegitiga2" type="number" name="tinggi" placeholder="Tinggi Segitiga">
                     <br>
-                        <input class="ipSegitiga2" type="number" name="tinggi" placeholder="Tinggi Segitiga">
-                    <br>
-                    <button style="margin-left:54%;margin-top:17%;" type="submit" name="segitiga">Jalankan</button>
+                    <button style="margin-left:54%;margin-top:17%;" type="submit" name="segitiga">Jalankan</button> -->
                 </div>
             </form>
         </div>
