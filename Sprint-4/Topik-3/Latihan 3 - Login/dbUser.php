@@ -15,12 +15,13 @@ class User{
         $query = "SELECT * FROM masuk WHERE nama='$nama'";
         $show = $this->data->prepare($query);
         $show->execute();
-        $result = $show->fetchAll(pdo::FETCH_ASSOC);
+        $result = $show->fetch(pdo::FETCH_ASSOC);
         return $result;
     }
     
 }
 
 $data =new User();
+
 
 ?>

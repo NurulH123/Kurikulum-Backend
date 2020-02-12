@@ -1,0 +1,15 @@
+{
+    "name": "nurul/composer",
+    "authors": [
+        {
+            "name": "NurulH123",
+            "email": "hidayatnurul937@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Pendaftar\\":""
+        }
+    }
+}
