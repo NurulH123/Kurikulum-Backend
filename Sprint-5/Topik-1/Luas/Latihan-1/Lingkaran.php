@@ -6,6 +6,6 @@ class Lingkaran {
         
         $luas = 3.14*($r)**2;
         // echo "jari-jari = ".$r ."<br>";
-        echo "Luas Lingkaran = ".$luas."<br><br>";
+        echo "<strong>Luas Lingkaran = </strong>".$luas."<br><br>";
     }
 }
