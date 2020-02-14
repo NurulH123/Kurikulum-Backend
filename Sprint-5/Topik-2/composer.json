@@ -1,5 +1,5 @@
 {
-    "name": "nurul/composer",
+    "name": "nurul/topik-2",
     "authors": [
         {
             "name": "NurulH123",
@@ -8,8 +8,10 @@
     ],
     "require": {},
     "autoload": {
-        "psr-4": {
-            "BangunDatar\\":""
+        "psr-4":{
+            "Lingkaran\\":"Luas/latihan/",  
+            "Persegi\\":"Luas/latihan/",
+            "Segitiga\\":"Luas/latihan/"
         }
     }
 }

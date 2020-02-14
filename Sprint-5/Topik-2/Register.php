@@ -1,10 +1,10 @@
 <?php
-namespace Pendaftar;
+namespace BangunDatar;
 
 class Register{
     function __construct()
     {
-        echo "Hello Nurul";
+        echo "Hallo Selamat datang";
     }
 }
 

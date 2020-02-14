@@ -1,5 +1,5 @@
 {
-    "name": "nurul/composer",
+    "name": "nurul/crud",
     "authors": [
         {
             "name": "NurulH123",
@@ -7,9 +7,9 @@
         }
     ],
     "require": {},
-    "autoload": {
+    "autoload":{
         "psr-4": {
-            "BangunDatar\\":""
+            "Penjual\\":"data/"
         }
     }
 }
