@@ -2,12 +2,12 @@
 namespace Segitiga;
 
 class Segitiga {
-    function __construct($alas,$tinggi)
+    function __construct($alas,$tinggi,$miring)
     {
         $luas = (($alas*$tinggi)/2);
-        // echo "alas = ".$alas."<br>";
-        // echo "tinggi = ".$tinggi."<br>";
-        echo "Luas Segitiga = ".$luas;
+        $keliling =$alas+(2*$miring);
+        echo "<p>Keliling Segitiga = ".$keliling."</p>"; 
+        echo "<p>Luas Segitiga = ".$luas."</p>";
     }
 
 }

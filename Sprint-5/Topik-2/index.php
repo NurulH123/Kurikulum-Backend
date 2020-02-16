@@ -2,105 +2,110 @@
 //use (nama namespacenya) \ <nama class>
 require_once __DIR__ .'/vendor/autoload.php';
 
-// use Lingkaran\Lingkaran;
-// use Persegi\Persegi;
-// use Segitiga\Segitiga;
+use Lingkaran\Lingkaran;
+use Persegi\Persegi;
+use Segitiga\Segitiga;
 
-$r =7;
-// $sisi =4;
-// $alas =8;
-// $tinggi =6;
+$r =$_POST['jari'];
+$sisi =$_POST['sisi'];
+$alas =$_POST['alas'];
+$tinggi =$_POST['tinggi'];
+$miring =$_POST['miring'];
 
-// $lingkaran = new Lingkaran($r);
-// $persegi =new Persegi($sisi);
-// $segitiga =new Segitiga($alas,$tinggi);
-// ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Composer</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Latihan Composer</title>
     <style>
-        body{
-            background-image:url(math.jpg);
-        }
-        h1{
-            text-shadow:2px 5px 3px 6px yellowgreen;
-            font-size:100px;
-            margin:3% auto;
-            margin-left:25%;
-            color:red;
-        }
-        .kotak{
-            margin:14% auto;        
-            width:45%;
-            height:80px;
-            /* border:1px solid black; */
-            position:relative;
-            text-align:center;
-            justify-content:center;
-            grid:center;
-        }
-        .kotakL{
-            width:30%;
-            height:50px;
-            margin-top:3%;
-            border:1px solid black;
-            text-align:center;
-            background-color:#89d185;
-            border-radius:8px;
-            box-shadow:inset -1px 2px 4px 7px #f0f0f0;
-        }
-        .kotakP{
-            width:30%;
-            height:50px;
-            border:1px solid black;
-            text-align:center;
-            position:relative;
-            margin-left:35%;
-            margin-top:-8.6%;
-            background-color:#89d185;
-            border-radius:8px;
-        }
-        .kotakS{
-            width:30%;
-            height:50px;
-            border:1px solid black;
-            text-align:center;
-            position:absolute;
-            margin-left:70%;
-            margin-top:-8.6%;
-            background-color:#89d185;
-            border-radius:8px;
-
-        }
-        a{
-            text-decoration:none;
-            font-size:35px;
-        }
+        
     </style>
 </head>
 <body>
 <h1>MATHEMATIC</h1>
 
 <div class="kotak">
+<!-- Kotak Lingkaran -->
     <div class="kotakL">
-        <a href="">Lingkaran</a>
+        <a class="lingkarA" href="#lingkaran">Lingkaran</a>
+
+    <!-- Backgroun item overlay -->
+        <div class="overlay" id="lingkaran">
+            <a href="#">
+                <img src="img/icondelete.png" alt="">
+            </a>
+            <div class="subL">
+                <h2>Lingkaran</h2>
+                <form action="" method="POST">
+                    <input class="ipLingkaran" type="number" name="jari" placeholder="Jari-jari Lingkaran">
+                    <?php 
+                    echo "<br>";
+                    $lingkaran = new Lingkaran($r);
+                    ?>                       
+                    <button type="submit" name="hitung"><span>Hitung</span></button>
+                </form>
+            </div>
+        </div>
+
     </div>
+
+<!-- Kotak Persegi -->
     <div class="kotakP">
-        <a href="">Persegi</a>
+        <a class="persegiA" href="#persegi">Persegi</a>
+
+    <!-- Backgroun item overlay -->
+        <div class="overlay" id="persegi">
+            <a href="#">
+                <img src="img/icondelete.png" alt="">
+            </a>
+            <div class="subP">
+                <h2>Persegi</h2>
+                <form action="" method="POST">
+                    <input class="ipLingkaran" type="number" name="sisi" placeholder="Sisi Persegi">
+                    <?php 
+                    echo "<br>";
+                    $persegi =new Persegi($sisi);
+                    ?>                       
+                    <button type="submit" name="hitung"><span>Hitung</span></button>
+                </form>
+            </div>
+        </div>
+
     </div>
+
+<!-- Kotak Segitiga -->
     <div class="kotakS">
-        <a href="">Segitiga</a>
+        <a class="segitigaA" href="#segitiga">Segitiga</a>
+    
+    <!-- Backgroun item overlay -->
+        <div class="overlay" id="segitiga">
+            <a href="#">
+                <img src="img/icondelete.png" alt="">
+            </a>
+            <div class="subS S">
+                <h2>Segitiga</h2>
+                <form action="" method="POST">
+                    <input class="ipLingkaran" type="number" name="alas" placeholder="Alas Segitiga">
+                    <br>
+                    <input class="ipLingkaran" type="number" name="tinggi" placeholder="Tinggi Segitiga">
+                    <br>
+                    <input class="ipLingkaran" type="number" name="miring" placeholder="Miring Segitiga">
+                    <?php 
+                    // echo "<br>";
+                    $segitiga =new Segitiga($alas,$tinggi,$miring);
+                    ?>                       
+                    <button class="bSegitiga" type="submit" name="hitung"><span>Hitung</span></button>
+                </form>
+            </div>
+        </div>
+
+    </div>
     </div>
 </div>
 
-    <form action="" method="POST">
-        <div class="lingkaran">
-        
-        </div>
-    </form>
 </body>
 </html>

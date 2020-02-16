@@ -6,7 +6,8 @@ class Persegi {
     {
         
         $luas =$sisi**2;
-        // echo "sisi = ".$sisi."<br>";
-        echo "Luas Persegi = ".$luas;
+        echo "<p>Keliling Persegi = ". 4*$sisi."</p>";
+        echo "<br>";
+        echo "<p>Luas Persegi = ".$luas."</p>";
     }
 }
